@@ -1,0 +1,23 @@
+{
+  "name": "ir-base",
+  "version": "0.0.0",
+  "description": "IR Mesh Base process repo using Seneca",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "test": "jasmine-node spec --autotest --watch .",
+    "coverage": "istanbul cover  node_modules/jasmine/bin/jasmine.js"
+  },
+  "author": "Mohamed Habashy",
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "request-promise": "^3.0.0",
+    "seneca": "^2.1.0",
+    "seneca-balance-client": "^0.5.0",
+    "seneca-mesh": "^0.8.0" 
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.4",
+    "jasmine": "^2.4.1"
+  }
+}
