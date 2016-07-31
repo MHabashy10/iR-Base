@@ -1,7 +1,7 @@
 
 var Promise = require('bluebird');
 
-var client = require('redis').createClient(process.env.REDIS_URL);
+//var client = require('redis').createClient(process.env.REDIS_URL);
 
 //Lets require/import the HTTP module
 var http = require('http');
@@ -21,7 +21,7 @@ seneca.pact = Promise.promisify(seneca.act, { context: seneca });
 
 // set interval for every 9 sec send the watchdog signal
 setInterval(function(){
-seneca.pact({ role: 'system', cmd: 'watchdog', type:'redis' })
+seneca.pact({ role: 'system', cmd: 'watchdog' })
     .then(function (live) {
         console.log("Live Nodes: "+ JSON.stringify( live));
     });
