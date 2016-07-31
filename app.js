@@ -22,4 +22,5 @@ seneca.pact({ role: 'system', cmd: 'watchdog' })
     });
 }, 9000);
 
+console.log("port: "+process.env.PORT||39999)
 module.exports = seneca;
