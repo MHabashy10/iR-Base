@@ -10,7 +10,7 @@ seneca = require('seneca')({
   timeout: 30000,
   tag: 'base node',
 })
-.use('redis-transport')
+//.use('redis-transport')
 .use('mesh',
   {
      port: process.env.PORT||39999,
