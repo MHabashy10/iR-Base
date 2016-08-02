@@ -10,13 +10,13 @@ seneca = require('seneca')({
   timeout: 30000,
   tag: 'base node',
 })
-//.use('redis-transport')
+.use('redis-transport',{redis:{url: process.env.REDIS_URL}})
 .use('mesh',
   {
      port: process.env.PORT||39999,
         isbase: true,
   });
-
+console.log("redis url: "+  process.env.REDIS_URL);
 seneca.pact = Promise.promisify(seneca.act, { context: seneca });
 
 // set interval for every 9 sec send the watchdog signal
