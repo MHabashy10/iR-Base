@@ -13,7 +13,7 @@ seneca = require('seneca')({
     transport:{
       redis:{
         timeout:1000,
-         url:"redis://h:pbh7cojobnk8s640c0ae3o5squ6@ec2-46-137-186-21.eu-west-1.compute.amazonaws.com:13299"
+         url: process.env.REDIS_URL
       }
     }
 })
